@@ -1,0 +1,12 @@
+In folder Pie&Basestation(C code for PIE and Base station)
+The main function for PIE and Base station are written in the same .c file(main.c).
+When compling to PIE, please check #define PIE is not commented  and do the same for compiling to the Base station.
+All the main functional components are defined in file "pie.c". The communication functions are the shareing resource for both PIE and Base station.
+motor.c and odometry.c are put in "utility" foler.
+In folder Matlab20150113 (Matlab code for Project PC)
+The main thread on the project PC of this Project is written in a script called "main_PC.m".
+This script also includes the timer setting for image. When running this script, both the two thread have been started.
+All the transmitting between Project-PC and the base station are done by serial communication.
+On PC side, after initialized the serial port, data_callback is responsible for receive the serial data in time.
+The main action for sending message has been done in sendCoord secipt.
+Since the main thread is a loop, please press ctl+c to stop the whole programe when you want to stop.
